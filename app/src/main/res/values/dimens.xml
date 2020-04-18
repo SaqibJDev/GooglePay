@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="defaultSpacing">16dp</dimen>
+    <dimen name="mediumSpacing">32dp</dimen>
+    <dimen name="largeSpacing">64dp</dimen>
+</resources>

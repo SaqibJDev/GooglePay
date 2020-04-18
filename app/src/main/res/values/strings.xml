@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Google Pay</string>
+    <string name="title_home">Google Pay Demo</string>
+    <string name="title_add_class">Add a Class</string>
+    <string name="title_add_object">Add an Object</string>
+    <string name="home">Home</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 </resources>

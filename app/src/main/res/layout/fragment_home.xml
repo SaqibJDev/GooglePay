@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/defaultSpacing"
+    tools:context=".ui.HomeActivity">
+
+    <ImageView
+        android:id="@+id/googlePayLogo"
+        android:layout_width="260dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/largeSpacing"
+        android:src="@drawable/ic_google_pay_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add a Class"
+        android:layout_marginTop="@dimen/mediumSpacing"
+        app:layout_constraintTop_toBottomOf="@id/googlePayLogo" />
+
+    <Button
+        android:id="@+id/addObject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/defaultSpacing"
+        android:text="Add an Object"
+        app:layout_constraintTop_toBottomOf="@id/addClass" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
