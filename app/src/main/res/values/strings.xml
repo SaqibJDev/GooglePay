@@ -8,4 +8,16 @@
     <!-- Strings used for fragments for navigation -->
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+
+    <string name="class_inserted">Congratulation! The transit class with id %1$s has been inserted successfully.</string>
+    <string name="class_insertion_failed">Transit class insertion failed. Please see the Logcat for details.</string>
+
+    <string-array name="transit_type">
+        <item>bus</item>
+        <item>rail</item>
+        <item>tram</item>
+        <item>ferry</item>
+        <item>other</item>
+    </string-array>
+
 </resources>

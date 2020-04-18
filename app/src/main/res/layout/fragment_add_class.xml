@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".ui.HomeActivity">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/classIdTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/classId"
+            android:hint="Class ID"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/issuerNameTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/classIdTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/issuerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Issuer name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/logoUrlTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/issuerNameTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/logoUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Logo image URL" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bgColorTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/logoUrlTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bgColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Background colour (Hex) e.g. #000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/transitType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginVertical="@dimen/defaultSpacing"
+        app:layout_constraintTop_toBottomOf="@+id/bgColorTextInputLayout" />
+
+    <Button
+        android:id="@+id/addClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Class"
+        app:layout_constraintTop_toBottomOf="@id/transitType" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
