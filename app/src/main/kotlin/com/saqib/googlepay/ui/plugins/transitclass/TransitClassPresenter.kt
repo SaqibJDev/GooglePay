@@ -14,17 +14,14 @@ class TransitClassPresenter(private val view: TransitClassView) {
         view.setLoading(true)
         val service = TransitService(context = context)
         onBackgroundIOThread {
-            val success = service.insertClass(transitClass = transitClass.getTransitClass())
-            showUIConfirmation(context, success, transitClass.classId)
+            val id = service.insertClass(transitClass = transitClass.getTransitClass())
+            showUIConfirmation(context, id)
         }
     }
 
-    private fun showUIConfirmation(context: Context, success: Boolean, classId: String) = onUiThread {
+    private fun showUIConfirmation(context: Context, classId: String?) = onUiThread {
         view.setLoading(false)
-        val message = if (success) context.resources.getString(
-            R.string.class_inserted,
-            classId
-        ) else context.resources.getString(R.string.class_insertion_failed)
+        val message = if (classId != null) context.resources.getString(R.string.class_inserted, classId ) else context.resources.getString(R.string.class_insertion_failed)
         Toast.makeText(context, message, Toast.LENGTH_LONG).show()
     }
 }

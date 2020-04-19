@@ -26,7 +26,6 @@ class TransitClassFragment : Fragment(), TransitClassView {
     ): View? {
         _binding = FragmentAddClassBinding.inflate(inflater, container, false)
         return binding.root
-        //return inflater.inflate(R.layout.fragment_add_class, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
