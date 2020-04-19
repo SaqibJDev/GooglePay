@@ -68,8 +68,12 @@ dependencies {
         exclude group: "com.google.guava"
     }
     api group: 'com.googlecode.jsontoken', name: 'jsontoken', version: '1.0'
-    api("io.jsonwebtoken:jjwt-api:$versions.jsonwebtoken") {
+
+    api "io.jsonwebtoken:jjwt-api:$versions.jsonwebtoken"
+    runtimeOnly "io.jsonwebtoken:jjwt-impl:$versions.jsonwebtoken"
+    runtimeOnly("io.jsonwebtoken:jjwt-orgjson:$versions.jsonwebtoken") {
         exclude group: 'org.json', module: 'json' //provided by Android natively
     }
+
     testImplementation "junit:junit:$versions.test.junit"
 }
