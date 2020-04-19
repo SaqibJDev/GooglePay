@@ -12,14 +12,14 @@ import com.google.api.services.walletobjects.Walletobjects
 import com.google.api.services.walletobjects.Walletobjects.Builder
 import com.google.api.services.walletobjects.model.TransitClass
 import com.google.api.services.walletobjects.model.TransitObject
-import com.saqib.googlepay.gpay.Config
+import com.saqib.googlepay.gpay.GooglePayConfig
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 
 class TransitRestClient(private val context: Context) : CoroutineScope by MainScope() {
     private val TAG = "Google Pay"
     private val httpTransport = NetHttpTransport()
-    private val config: Config = Config.getInstance(context)
+    private val config: GooglePayConfig = GooglePayConfig.getInstance(context)
     private lateinit var credentials: GoogleCredential
     private lateinit var client: Walletobjects
 
@@ -101,7 +101,7 @@ class TransitRestClient(private val context: Context) : CoroutineScope by MainSc
         if (this::client.isInitialized) return
         val jsonFactory: JsonFactory = GsonFactory()
         client = Builder(httpTransport, jsonFactory, credentials)
-            .setApplicationName(config.applicationName)
+            .setApplicationName(config.APPLICATION_NAME)
             .build()
     }
 }
