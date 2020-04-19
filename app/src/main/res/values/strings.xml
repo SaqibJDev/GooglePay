@@ -7,10 +7,20 @@
 
     <!-- Strings used for fragments for navigation -->
     <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="addObject">Previous</string>
 
     <string name="class_inserted">Congratulation! The transit class with id %1$s has been inserted successfully.</string>
     <string name="class_insertion_failed">Transit class insertion failed. Please see the Logcat for details.</string>
+    <string name="add_class">Add Class</string>
+    <string name="add_object">Add Object</string>
+    <string name="origin">Origin</string>
+    <string name="destination">Destination</string>
+    <string name="origin_short">Origin Code</string>
+    <string name="destination_short">Dest. Code</string>
+    <string name="passenger_name">Passenger name</string>
+    <string name="seat">Seat</string>
+    <string name="barcode_value">QR Code Value (e.g. TK12345678)</string>
+    <string name="object_insertion_failed">Object insertion failed. Please see the Logcat for details.</string>
 
     <string-array name="transit_type">
         <item>bus</item>
@@ -20,4 +30,8 @@
         <item>other</item>
     </string-array>
 
+    <string-array name="trip_type">
+        <item>oneWay</item>
+        <item>roundTrip</item>
+    </string-array>
 </resources>
