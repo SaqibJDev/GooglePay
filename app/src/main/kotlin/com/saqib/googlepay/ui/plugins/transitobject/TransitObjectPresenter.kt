@@ -8,7 +8,6 @@ import android.widget.Toast
 import com.saqib.googlepay.R
 import com.saqib.googlepay.extension.onBackgroundIOThread
 import com.saqib.googlepay.extension.onUiThread
-import com.saqib.googlepay.gpay.GooglePayTransitPassReceivedEvent
 import com.saqib.googlepay.gpay.model.TransitPass
 import com.saqib.googlepay.gpay.service.TransitService
 

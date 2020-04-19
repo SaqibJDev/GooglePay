@@ -6,7 +6,7 @@ import com.google.api.client.json.GenericJson
 import com.google.api.services.walletobjects.model.TransitClass
 import com.google.api.services.walletobjects.model.TransitObject
 import com.google.gson.JsonObject
-import com.saqib.googlepay.gpay.Jwt
+import com.saqib.googlepay.gpay.jwt.Jwt
 
 private const val EXISTS_MESSAGE = "No changes will be made when saved by link. " +
         "To update info, use update() or patch(). " +
