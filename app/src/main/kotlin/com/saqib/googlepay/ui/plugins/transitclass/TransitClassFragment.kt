@@ -31,6 +31,8 @@ class TransitClassFragment : Fragment(), TransitClassView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         requireActivity().enableBackNavigation()
+        requireActivity().title = resources.getString(R.string.add_a_class)
+
         presenter = TransitClassPresenter(this)
 
         binding.addClass.setOnClickListener {

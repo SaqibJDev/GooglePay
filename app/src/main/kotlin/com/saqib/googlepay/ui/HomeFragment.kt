@@ -26,6 +26,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         requireActivity().disableBackNavigation()
+        requireActivity().title = resources.getString(R.string.title_home)
 
         binding.addClass.setOnClickListener {
             findNavController().navigate(R.id.action_homeToAddClass)

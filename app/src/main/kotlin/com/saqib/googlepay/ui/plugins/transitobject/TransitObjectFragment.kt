@@ -32,6 +32,8 @@ class TransitObjectFragment : Fragment(), TransitObjectView {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         requireActivity().enableBackNavigation()
+        requireActivity().title = resources.getString(R.string.add_an_object)
+
         presenter = TransitObjectPresenter(requireActivity(), this)
         setupViews()
         setupListeners()

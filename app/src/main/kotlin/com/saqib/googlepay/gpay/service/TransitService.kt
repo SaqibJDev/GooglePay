@@ -6,6 +6,7 @@ import com.google.api.client.json.GenericJson
 import com.google.api.services.walletobjects.model.TransitClass
 import com.google.api.services.walletobjects.model.TransitObject
 import com.google.gson.JsonObject
+import com.saqib.googlepay.gpay.GooglePayConfig.TAG
 import com.saqib.googlepay.gpay.jwt.Jwt
 
 private const val EXISTS_MESSAGE = "No changes will be made when saved by link. " +
@@ -14,7 +15,6 @@ private const val EXISTS_MESSAGE = "No changes will be made when saved by link. 
         "https://developers.google.com/pay/passes/guides/get-started/implementing-the-api/engage-through-google-pay#update-state\n"
 
 class TransitService(private val context: Context, private val objectPayload: TransitObject? = null) {
-    private val TAG = "Google Pay"
 
     internal enum class WalletObjectType { CLASS, OBJECT }
 

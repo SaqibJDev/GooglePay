@@ -13,10 +13,9 @@ import com.google.api.services.walletobjects.Walletobjects.Builder
 import com.google.api.services.walletobjects.model.TransitClass
 import com.google.api.services.walletobjects.model.TransitObject
 import com.saqib.googlepay.gpay.GooglePayConfig
+import com.saqib.googlepay.gpay.GooglePayConfig.TAG
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
-
-private const val TAG = "Google Pay"
 
 class TransitRestClient(private val context: Context) : CoroutineScope by MainScope() {
     private val httpTransport = NetHttpTransport()
