@@ -8,26 +8,30 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.saqib.googlepay.R
+import com.saqib.googlepay.databinding.FragmentHomeBinding
 import com.saqib.googlepay.extension.disableBackNavigation
 
 class HomeFragment : Fragment() {
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         requireActivity().disableBackNavigation()
 
-        view.findViewById<Button>(R.id.addClass).setOnClickListener {
+        binding.addClass.setOnClickListener {
             findNavController().navigate(R.id.action_homeToAddClass)
         }
 
-        view.findViewById<Button>(R.id.addObject).setOnClickListener {
+        binding.addObject.setOnClickListener {
             findNavController().navigate(R.id.action_homeToAddObject)
         }
     }

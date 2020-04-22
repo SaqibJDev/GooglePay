@@ -21,7 +21,7 @@
         android:id="@+id/addClass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add a Class"
+        android:text="@string/add_a_class"
         android:layout_marginTop="@dimen/mediumSpacing"
         app:layout_constraintTop_toBottomOf="@id/googlePayLogo" />
 
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/defaultSpacing"
-        android:text="Add an Object"
+        android:text="@string/add_an_object"
         app:layout_constraintTop_toBottomOf="@id/addClass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

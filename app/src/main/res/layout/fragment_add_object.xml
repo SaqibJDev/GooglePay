@@ -19,7 +19,7 @@
             android:id="@+id/classId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Class ID"
+            android:hint="@string/class_id"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="0dp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -36,7 +36,7 @@
             android:id="@+id/objectId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Object ID"
+            android:hint="@string/object_id"
             app:layout_constraintTop_toTopOf="parent" />
     </com.google.android.material.textfield.TextInputLayout>
 

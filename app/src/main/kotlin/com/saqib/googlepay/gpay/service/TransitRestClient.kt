@@ -16,8 +16,9 @@ import com.saqib.googlepay.gpay.GooglePayConfig
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 
+private const val TAG = "Google Pay"
+
 class TransitRestClient(private val context: Context) : CoroutineScope by MainScope() {
-    private val TAG = "Google Pay"
     private val httpTransport = NetHttpTransport()
     private val config: GooglePayConfig = GooglePayConfig.getInstance(context)
     private lateinit var credentials: GoogleCredential
@@ -85,7 +86,7 @@ class TransitRestClient(private val context: Context) : CoroutineScope by MainSc
         try {
             response = client.transitobject()[objectId].execute()
             response["code"] = 200
-            // System.out.println(response)
+            Log.i(TAG, "response: $response")
         } catch (gException: GoogleJsonResponseException) {
             Log.i(TAG, ">>>> [START] Google Server Error response:")
             Log.i(TAG, gException.details.message)

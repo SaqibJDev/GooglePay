@@ -33,10 +33,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-// To inline the bytecode built with JVM target 1.8 into
-// bytecode that is being built with JVM target 1.6. (e.g. navArgs)
 
-
+    // To inline the bytecode built with JVM target 1.8 into
+    // bytecode that is being built with JVM target 1.6. (e.g. navArgs)
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -55,7 +54,6 @@ dependencies {
 
     implementation "androidx.navigation:navigation-fragment-ktx:$versions.androidX.navigation"
     implementation "androidx.navigation:navigation-ui-ktx:$versions.androidX.navigation"
-
 
     api("org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.kotlin.coroutines") {
         exclude module: 'kotlin-stdlib'

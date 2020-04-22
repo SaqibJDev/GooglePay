@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:padding="@dimen/defaultSpacing"
     tools:context=".ui.HomeActivity">
 
 
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/classId"
-            android:hint="Class ID"
+            android:hint="@string/class_id"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="0dp"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -35,7 +35,7 @@
             android:id="@+id/issuerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Issuer name" />
+            android:hint="@string/issuer_name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -48,7 +48,7 @@
             android:id="@+id/logoUrl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Logo image URL" />
+            android:hint="@string/logo_image_url" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -61,7 +61,7 @@
             android:id="@+id/bgColor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Background colour (Hex) e.g. #000000" />
+            android:hint="@string/background_colour" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
