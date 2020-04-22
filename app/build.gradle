@@ -6,6 +6,10 @@ android {
     compileSdkVersion versions.compileSdk
     buildToolsVersion versions.buildTools
 
+    viewBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.saqib.googlepay"
         minSdkVersion versions.minSdk
@@ -16,18 +20,58 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test {
+            java.srcDirs += 'src/test/kotlin'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    // To inline the bytecode built with JVM target 1.8 into
+    // bytecode that is being built with JVM target 1.6. (e.g. navArgs)
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin.sdk"
     implementation "androidx.appcompat:appcompat:$versions.androidX.appcompat"
     implementation "androidx.constraintlayout:constraintlayout:$versions.androidX.constraintlayout"
+    api "com.google.android.material:material:$versions.androidX.material"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$versions.androidX.navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$versions.androidX.navigation"
+
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.kotlin.coroutines") {
+        exclude module: 'kotlin-stdlib'
+    }
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.kotlin.coroutines") {
+        exclude module: 'kotlin-stdlib'
+    }
+
+    api(group: 'com.google.api-client', name: 'google-api-client-gson', version: '1.23.0') {
+        exclude group: "com.google.guava"
+    }
+    api group: 'com.googlecode.jsontoken', name: 'jsontoken', version: '1.0'
+
+    api "io.jsonwebtoken:jjwt-api:$versions.jsonwebtoken"
+    runtimeOnly "io.jsonwebtoken:jjwt-impl:$versions.jsonwebtoken"
+    runtimeOnly("io.jsonwebtoken:jjwt-orgjson:$versions.jsonwebtoken") {
+        exclude group: 'org.json', module: 'json' //provided by Android natively
+    }
+
     testImplementation "junit:junit:$versions.test.junit"
 }

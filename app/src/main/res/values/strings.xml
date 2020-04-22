@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">Google Pay</string>
+    <string name="title_home">Google Pay Demo</string>
+    <string name="home">Home</string>
+    <string name="title_add_class">@string/add_a_class</string>
+    <string name="title_add_object">@string/add_an_object</string>
+
+    <string name="add_an_object">Add an Object</string>
+    <string name="add_a_class">Add a Class</string>
+    <string name="class_id">Class ID</string>
+    <string name="issuer_name">Issuer name</string>
+    <string name="logo_image_url">Logo image URL</string>
+    <string name="background_colour">Background colour (Hex) e.g. #000000</string>
+    <string name="add_class">Add Class</string>
+    <string name="object_id">Object ID</string>
+    <string name="origin">Origin</string>
+    <string name="destination">Destination</string>
+    <string name="origin_short">Origin Code</string>
+    <string name="destination_short">Dest. Code</string>
+    <string name="passenger_name">Passenger name</string>
+    <string name="seat">Seat</string>
+    <string name="barcode_value">QR Code Value (e.g. TK12345678)</string>
+    <string name="add_object">Add Object</string>
+
+    <!-- Closure Messages -->
+    <string name="class_inserted">Congratulation! The transit class with id %1$s has been inserted successfully.</string>
+    <string name="class_insertion_failed">Transit class insertion failed. Please see the Logcat for details.</string>
+    <string name="object_insertion_failed">Object insertion failed. Please see the Logcat for details.</string>
+
+    <string-array name="transit_type">
+        <item>bus</item>
+        <item>rail</item>
+        <item>tram</item>
+        <item>ferry</item>
+        <item>other</item>
+    </string-array>
+
+    <string-array name="trip_type">
+        <item>oneWay</item>
+        <item>roundTrip</item>
+    </string-array>
 </resources>

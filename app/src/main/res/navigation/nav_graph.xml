@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.saqib.googlepay.ui.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeToAddClass"
+            app:destination="@id/classFragment" />
+
+        <action
+            android:id="@+id/action_homeToAddObject"
+            app:destination="@id/objectFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/classFragment"
+        android:name="com.saqib.googlepay.ui.plugins.transitclass.TransitClassFragment"
+        android:label="@string/title_add_class"
+        tools:layout="@layout/fragment_add_class">
+
+        <action
+            android:id="@+id/action_addClassToHome"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/objectFragment"
+        android:name="com.saqib.googlepay.ui.plugins.transitobject.TransitObjectFragment"
+        android:label="@string/title_add_object"
+        tools:layout="@layout/fragment_add_object">
+
+        <action
+            android:id="@+id/action_addObjectToHome"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
