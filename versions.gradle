@@ -20,5 +20,7 @@ versions.androidX.material = "1.1.0"
 versions.androidX.navigation = "2.0.0"
 
 versions.jsonwebtoken = "0.11.0"
+versions.googleApiClient = "1.23.0"
+versions.jsontoken = "1.0"
 
 versions.test.junit = "4.13"
