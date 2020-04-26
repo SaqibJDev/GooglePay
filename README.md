@@ -33,7 +33,7 @@ The main missing pieces are:
 
 ## References and resources
 The library I used was shared officially by Google [here](https://github.com/google-pay/passes-rest-samples). 
-I imported the Java library and adapted it for Android by converting the most of the code to Kotlin. Further the Base64 from the library didn't work with Android.
+I imported the Java library and adapted it for Android by converting the most of the code to Kotlin. Furthermore, the Base64 from the library didn't work with Android.
 Therefore had to use different dependency and wrote a wrapper to make it work.  
      
 
