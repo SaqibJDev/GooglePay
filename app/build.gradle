@@ -62,10 +62,10 @@ dependencies {
         exclude module: 'kotlin-stdlib'
     }
 
-    api(group: 'com.google.api-client', name: 'google-api-client-gson', version: '1.23.0') {
+    api(group: 'com.google.api-client', name: 'google-api-client-gson', version: "$versions.googleApiClient") {
         exclude group: "com.google.guava"
     }
-    api group: 'com.googlecode.jsontoken', name: 'jsontoken', version: '1.0'
+    api group: 'com.googlecode.jsontoken', name: 'jsontoken', version: "$versions.jsontoken"
 
     api "io.jsonwebtoken:jjwt-api:$versions.jsonwebtoken"
     runtimeOnly "io.jsonwebtoken:jjwt-impl:$versions.jsonwebtoken"
